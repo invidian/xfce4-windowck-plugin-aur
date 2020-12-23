@@ -3,21 +3,21 @@
 # Contributor: Cedric Leporcq <cedric at gmail dot com>
 
 pkgname=xfce4-windowck-plugin
-pkgver=0.4.6
-pkgrel=2
+pkgver=0.4.10
+pkgrel=1
 pkgdesc="Xfce panel plugin which allows to put the maximized window title and buttons on the panel."
 arch=('i686' 'x86_64')
-url="https://github.com/cedl38/xfce4-windowck-plugin"
+url="https://github.com/invidian/xfce4-windowck-plugin"
 license=('GPL3')
-depends=('xfce4-panel<4.15.0' 'libwnck')
+depends=('xfce4-panel<4.17.0' 'libwnck')
 makedepends=('intltool' 'xfce4-dev-tools' 'python' 'imagemagick')
 options=('!libtool')
-source=("$pkgname-$pkgver.tar.gz::https://github.com/cedl38/$pkgname/archive/v$pkgver.tar.gz")
-sha256sums=('1643fa4a8bdbc401160fae6a132dcab89ed88d10231f84ed058f7a3e842763f7')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/invidian/$pkgname/archive/v$pkgver.tar.gz")
+sha256sums=('ff12ae63b26f5d62c839e9c15b329de2b1f372f105fbc063281a98a62097cac3')
 
 build() {
   cd "$srcdir/${pkgname}-$pkgver"
-  ./autogen.sh --prefix=/usr 
+  ./autogen.sh --prefix=/usr
   make
 }
 
